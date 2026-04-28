@@ -29,50 +29,38 @@
         <i data-feather="lightbulb" class="text-white w-6 h-6"></i>
       </div>
       <div class="hidden md:block">
-        <h1 class="font-bold text-xl text-white tracking-wide">Aula Creativa Oficial</h1>
-        <p class="text-xs text-purple-300 font-medium">Educación Digital</p>
+        <h1 class="font-bold text-xl text-white tracking-wide">Aula Creativa</h1>
+        <p class="text-xs text-purple-300 font-medium">J&Y</p>
       </div>
     </div>
 
     <nav class="flex-1 mt-4 px-2 md:px-4 space-y-2 overflow-y-auto" id="nav-menu">
-      <button onclick="cambiarPestana('inicio')" class="nav-btn w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all bg-purple-600/20 text-purple-300 border border-purple-500/30" data-tab="inicio" title="Inicio">
+      <button onclick="cambiarPestana('inicio')" class="nav-btn w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all bg-purple-600/20 text-purple-300 border border-purple-500/30" data-tab="inicio">
         <i data-feather="home" class="w-5 h-5"></i> <span class="hidden md:inline font-medium text-sm">Inicio</span>
       </button>
-      <button onclick="cambiarPestana('planeacion')" class="nav-btn w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all text-indigo-300 hover:bg-white/5 hover:text-white" data-tab="planeacion" title="Planeación">
+      <button onclick="cambiarPestana('planeacion')" class="nav-btn w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all text-indigo-300 hover:bg-white/5 hover:text-white" data-tab="planeacion">
         <i data-feather="file-text" class="w-5 h-5"></i> <span class="hidden md:inline font-medium text-sm">Planeación</span>
       </button>
-      <button onclick="cambiarPestana('ovas')" class="nav-btn w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all text-indigo-300 hover:bg-white/5 hover:text-white" data-tab="ovas" title="OVAs">
+      <button onclick="cambiarPestana('ovas')" class="nav-btn w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all text-indigo-300 hover:bg-white/5 hover:text-white" data-tab="ovas">
         <i data-feather="video" class="w-5 h-5"></i> <span class="hidden md:inline font-medium text-sm">OVAs</span>
       </button>
-      <button onclick="cambiarPestana('libro')" class="nav-btn w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all text-indigo-300 hover:bg-white/5 hover:text-white" data-tab="libro" title="Libro Digital">
+      <button onclick="cambiarPestana('libro')" class="nav-btn w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all text-indigo-300 hover:bg-white/5 hover:text-white" data-tab="libro">
         <i data-feather="book-open" class="w-5 h-5"></i> <span class="hidden md:inline font-medium text-sm">Libro Digital</span>
       </button>
-      <button onclick="cambiarPestana('comunidad')" class="nav-btn w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all text-indigo-300 hover:bg-white/5 hover:text-white" data-tab="comunidad" title="Comentarios">
+      <button onclick="cambiarPestana('comunidad')" class="nav-btn w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all text-indigo-300 hover:bg-white/5 hover:text-white" data-tab="comunidad">
         <i data-feather="users" class="w-5 h-5"></i> <span class="hidden md:inline font-medium text-sm">Comentarios</span>
       </button>
       
-      <!-- BOTÓN COMPARTIR -->
-      <button onclick="abrirModalCompartir()" class="w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all text-emerald-400 hover:bg-emerald-500/10 mt-4 border border-emerald-500/30" title="Compartir Plataforma">
+      <!-- COMPARTIR -->
+      <button onclick="abrirModalCompartir()" class="w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all text-emerald-400 hover:bg-emerald-500/10 mt-4 border border-emerald-500/30">
         <i data-feather="share-2" class="w-5 h-5"></i> <span class="hidden md:inline font-bold text-sm">Compartir 📲</span>
       </button>
-
-      <!-- RESPALDO -->
-      <div class="admin-only hidden pt-4 mt-4 border-t border-indigo-500/30">
-        <p class="text-[10px] uppercase tracking-widest text-fuchsia-400 font-bold mb-2 px-2 hidden md:block">Gestión de Respaldo</p>
-        <button onclick="exportarRespaldo()" class="w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all text-fuchsia-300 hover:bg-fuchsia-500/10" title="Descargar Respaldo">
-          <i data-feather="download" class="w-5 h-5"></i> <span class="hidden md:inline font-medium text-sm">Guardar Copia</span>
-        </button>
-        <button onclick="document.getElementById('import-file').click()" class="w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all text-fuchsia-300 hover:bg-fuchsia-500/10" title="Cargar Respaldo">
-          <i data-feather="upload" class="w-5 h-5"></i> <span class="hidden md:inline font-medium text-sm">Cargar Copia</span>
-        </button>
-        <input type="file" id="import-file" class="hidden" accept=".json" onchange="importarRespaldo(event)">
-      </div>
     </nav>
 
     <div class="p-4 border-t border-indigo-900 mt-auto shrink-0">
-      <button onclick="activarModoProfesor()" id="btn-modo-profe" class="flex items-center justify-center gap-2 w-full bg-[#130d26] border border-indigo-700 hover:bg-indigo-900 text-indigo-300 p-3 rounded-lg font-medium transition-colors text-sm">
-        <i data-feather="lock" class="w-4 h-4"></i>
-        <span class="hidden md:inline">Soy Profesor</span>
+      <button onclick="abrirModalLogin()" id="btn-modo-profe" class="flex items-center justify-center gap-2 w-full bg-[#130d26] border border-indigo-700 hover:bg-indigo-900 text-indigo-300 p-3 rounded-lg font-medium transition-colors text-sm">
+        <i data-feather="lock" class="w-4 h-4" id="lock-icon"></i>
+        <span class="hidden md:inline" id="lock-text">Soy Profesor</span>
       </button>
     </div>
   </div>
@@ -80,461 +68,328 @@
   <!-- ÁREA PRINCIPAL -->
   <div class="flex-1 overflow-y-auto relative" style="background: linear-gradient(135deg, #130d26 0%, #2a1147 100%);">
     
+    <!-- ESTADO DE CONEXIÓN NUBE -->
+    <div id="estado-nube" class="absolute top-4 left-4 bg-black/40 px-3 py-1 rounded-full text-[10px] font-bold flex items-center gap-2 z-20">
+      <div id="nube-punto" class="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></div>
+      <span id="nube-texto" class="text-indigo-200">Sincronizando...</span>
+    </div>
+
     <main class="p-6 md:p-10 max-w-5xl mx-auto mt-8 relative">
       
       <!-- ALERTAS -->
-      <div id="mensaje-alerta" class="hidden fixed top-5 right-5 text-white px-6 py-4 rounded-xl shadow-2xl z-50 flex items-start gap-3 fade-in max-w-sm">
+      <div id="mensaje-alerta" class="hidden fixed top-5 right-5 text-white px-6 py-4 rounded-xl shadow-2xl z-[100] flex items-start gap-3 fade-in max-w-sm">
         <i data-feather="info" class="w-5 h-5 shrink-0"></i>
         <span id="mensaje-texto" class="text-sm font-medium">Mensaje</span>
       </div>
 
       <!-- VISTA: INICIO -->
-      <div id="view-inicio" class="block space-y-4 pt-6 md:pt-10 fade-in">
-        <div class="text-center">
-          <h2 class="text-sm font-bold tracking-[0.3em] text-purple-400 uppercase mb-3">¡Hola, nos alegra verte aquí!</h2>
-          <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-500 mb-6 drop-shadow-lg leading-tight">
-            Bienvenidos a<br>Aula Creativa J&Y
-          </h1>
-          <p class="text-indigo-200 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed mb-10">
-            Un espacio donde disfrutarás de contenido valioso, diseñado especialmente para enriquecer tu aprendizaje, despertar tu curiosidad y potenciar tu imaginación. Además, un lugar para escuchar las voces y experiencias muy significativas para muchos maestros y estudiantes. ✨
-          </p>
-        </div>
+      <div id="view-inicio" class="block space-y-4 pt-6 md:pt-10 fade-in text-center">
+        <h2 class="text-sm font-bold tracking-[0.3em] text-purple-400 uppercase mb-3">¡Bienvenidos!</h2>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-pink-500 mb-6 drop-shadow-lg leading-tight">
+          Aula Creativa J&Y
+        </h1>
+        <p class="text-indigo-200 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed mb-10">
+          Un espacio donde disfrutarás de contenido valioso, diseñado para enriquecer tu aprendizaje y escuchar las voces y experiencias significativas de maestros y estudiantes. ✨
+        </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-          
-          <div onclick="cambiarPestana('planeacion')" class="bg-[#1e1541]/80 border border-indigo-500/30 p-6 rounded-2xl shadow-lg hover:-translate-y-2 hover:bg-[#1e1541] hover:border-indigo-400/60 transition-all cursor-pointer group">
-            <div class="bg-indigo-900/50 w-14 h-14 rounded-2xl flex items-center justify-center text-indigo-300 mb-5 group-hover:scale-110 transition-transform">
-              <i data-feather="file-text" class="w-7 h-7"></i>
-            </div>
+          <div onclick="cambiarPestana('planeacion')" class="bg-[#1e1541]/80 border border-indigo-500/30 p-6 rounded-2xl shadow-lg hover:-translate-y-2 cursor-pointer group transition-all">
+            <i data-feather="file-text" class="text-indigo-300 mb-4 group-hover:scale-110 transition-transform"></i>
             <h3 class="text-white font-bold text-lg mb-2">Planeaciones</h3>
-            <p class="text-indigo-300/80 text-sm leading-relaxed">Conoce las estrategias y la secuencia exacta de cómo llevar nuestras experiencias al aula.</p>
+            <p class="text-indigo-300/80 text-sm">Estrategias y secuencia de la experiencia en el aula.</p>
           </div>
-
-          <div onclick="cambiarPestana('ovas')" class="bg-[#1e1541]/80 border border-purple-500/30 p-6 rounded-2xl shadow-lg hover:-translate-y-2 hover:bg-[#1e1541] hover:border-purple-400/60 transition-all cursor-pointer group">
-            <div class="bg-purple-900/50 w-14 h-14 rounded-2xl flex items-center justify-center text-purple-300 mb-5 group-hover:scale-110 transition-transform">
-              <i data-feather="video" class="w-7 h-7"></i>
-            </div>
-            <h3 class="text-white font-bold text-lg mb-2">Videos y OVAs</h3>
-            <p class="text-indigo-300/80 text-sm leading-relaxed">Recursos basados en lo digital, diseñados para conectar con la creatividad y los intereses de los estudiantes.</p>
+          <div onclick="cambiarPestana('ovas')" class="bg-[#1e1541]/80 border border-purple-500/30 p-6 rounded-2xl shadow-lg hover:-translate-y-2 cursor-pointer group transition-all">
+            <i data-feather="video" class="text-purple-300 mb-4 group-hover:scale-110 transition-transform"></i>
+            <h3 class="text-white font-bold text-lg mb-2">OVAs</h3>
+            <p class="text-indigo-300/80 text-sm">Recursos digitales basados en creatividad e intereses.</p>
           </div>
-
-          <div onclick="cambiarPestana('libro')" class="bg-[#1e1541]/80 border border-pink-500/30 p-6 rounded-2xl shadow-lg hover:-translate-y-2 hover:bg-[#1e1541] hover:border-pink-400/60 transition-all cursor-pointer group">
-            <div class="bg-pink-900/50 w-14 h-14 rounded-2xl flex items-center justify-center text-pink-300 mb-5 group-hover:scale-110 transition-transform">
-              <i data-feather="book-open" class="w-7 h-7"></i>
-            </div>
+          <div onclick="cambiarPestana('libro')" class="bg-[#1e1541]/80 border border-pink-500/30 p-6 rounded-2xl shadow-lg hover:-translate-y-2 cursor-pointer group transition-all">
+            <i data-feather="book-open" class="text-pink-300 mb-4 group-hover:scale-110 transition-transform"></i>
             <h3 class="text-white font-bold text-lg mb-2">Libro Digital</h3>
-            <p class="text-indigo-300/80 text-sm leading-relaxed">Un espacio que cuenta las hermosas historias de maestros y niños con su experiencia en lo digital.</p>
+            <p class="text-indigo-300/80 text-sm">Historias de maestros y niños con lo digital.</p>
           </div>
-
-          <div onclick="cambiarPestana('comunidad')" class="bg-[#1e1541]/80 border border-fuchsia-500/30 p-6 rounded-2xl shadow-lg hover:-translate-y-2 hover:bg-[#1e1541] hover:border-fuchsia-400/60 transition-all cursor-pointer group">
-            <div class="bg-fuchsia-900/50 w-14 h-14 rounded-2xl flex items-center justify-center text-fuchsia-300 mb-5 group-hover:scale-110 transition-transform">
-              <i data-feather="users" class="w-7 h-7"></i>
-            </div>
+          <div onclick="cambiarPestana('comunidad')" class="bg-[#1e1541]/80 border border-fuchsia-500/30 p-6 rounded-2xl shadow-lg hover:-translate-y-2 cursor-pointer group transition-all">
+            <i data-feather="users" class="text-fuchsia-300 mb-4 group-hover:scale-110 transition-transform"></i>
             <h3 class="text-white font-bold text-lg mb-2">Comunidad</h3>
-            <p class="text-indigo-300/80 text-sm leading-relaxed">Comparte tus grandes ideas, resuelve tus dudas y conecta con todos tus compañeros en nuestro foro.</p>
+            <p class="text-indigo-300/80 text-sm">Foro para compartir dudas y experiencias.</p>
           </div>
-
         </div>
       </div>
 
-      <!-- VISTA: PLANEACIÓN -->
+      <!-- SECCIONES DE CONTENIDO -->
       <div id="view-planeacion" class="hidden space-y-8 fade-in">
-        <div class="border-b border-indigo-500/30 pb-6 mb-6">
-          <h2 class="text-3xl font-bold text-white mb-2">Planeaciones</h2>
-          <p class="text-indigo-300">Descubre las estrategias y la secuencia de cómo se lleva la experiencia de aprendizaje al aula.</p>
+        <h2 class="text-3xl font-bold text-white border-b border-indigo-500/30 pb-4">Planeaciones</h2>
+        <div id="admin-form-planeacion" class="admin-only hidden bg-[#1e1541] p-6 rounded-2xl border border-purple-500/30 shadow-xl mb-6">
+          <h3 class="text-lg font-bold mb-4">Nueva Planeación</h3>
+          <div class="space-y-3">
+            <input type="text" id="titulo-planeacion" placeholder="Título de la guía..." class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl outline-none text-white">
+            <input type="url" id="link-planeacion" placeholder="Enlace (Google Drive, Canva, etc)..." class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl outline-none text-white">
+            <button onclick="subirMaterial('planeacion')" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 rounded-xl">Publicar para todos</button>
+          </div>
         </div>
-        
-        <form onsubmit="subirMaterialGlobal(event, 'planeacion')" class="admin-only hidden bg-[#1e1541] border border-fuchsia-500/50 p-6 rounded-2xl shadow-xl mb-8 relative">
-          <div class="absolute -top-3 right-4 bg-fuchsia-600 text-white text-xs font-bold px-2 py-1 rounded">MODO PROFESOR</div>
-          <h3 class="text-lg font-bold text-white mb-4">Añadir Nueva Planeación</h3>
-          <div class="flex flex-col gap-4">
-            <input type="text" id="titulo-planeacion" placeholder="Escribe el Título de la planeación..." class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl text-white outline-none focus:border-purple-500" required>
-            <input type="url" id="link-planeacion" placeholder="Pega el enlace a tu Google Drive, OneDrive o Canva..." class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl text-white outline-none focus:border-purple-500" required>
-          </div>
-          <div class="mt-4 flex justify-end">
-            <button type="submit" class="bg-purple-600 hover:bg-purple-500 text-white py-2 px-6 rounded-xl font-bold flex items-center gap-2 transition-colors">Guardar Material</button>
-          </div>
-        </form>
-
-        <div id="lista-planeacion" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        <div id="lista-planeacion" class="grid gap-4 md:grid-cols-2"></div>
       </div>
 
-      <!-- VISTA: OVAS -->
       <div id="view-ovas" class="hidden space-y-8 fade-in">
-        <div class="border-b border-indigo-500/30 pb-6 mb-6">
-          <h2 class="text-3xl font-bold text-white mb-2">Objetos Virtuales de Aprendizaje (OVAs)</h2>
-          <p class="text-indigo-300">Recursos basados en lo digital, pensados para potenciar la creatividad y los intereses de los estudiantes.</p>
+        <h2 class="text-3xl font-bold text-white border-b border-indigo-500/30 pb-4">OVAs (Videos)</h2>
+        <div id="admin-form-ovas" class="admin-only hidden bg-[#1e1541] p-6 rounded-2xl border border-purple-500/30 shadow-xl mb-6">
+          <h3 class="text-lg font-bold mb-4">Añadir Video</h3>
+          <div class="space-y-3">
+            <input type="text" id="titulo-ovas" placeholder="Título del video..." class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl outline-none text-white">
+            <input type="url" id="link-ovas" placeholder="Enlace de YouTube o Drive..." class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl outline-none text-white">
+            <button onclick="subirMaterial('ovas')" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 rounded-xl">Publicar para todos</button>
+          </div>
         </div>
-        
-        <form onsubmit="subirMaterialGlobal(event, 'ova')" class="admin-only hidden bg-[#1e1541] border border-fuchsia-500/50 p-6 rounded-2xl shadow-xl mb-8 relative">
-          <div class="absolute -top-3 right-4 bg-fuchsia-600 text-white text-xs font-bold px-2 py-1 rounded">MODO PROFESOR</div>
-          <h3 class="text-lg font-bold text-white mb-4">Añadir Nuevo Video/OVA</h3>
-          <div class="flex flex-col gap-4">
-            <input type="text" id="titulo-ova" placeholder="Escribe el Título del video..." class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl text-white outline-none focus:border-purple-500" required>
-            <input type="url" id="link-ova" placeholder="Pega el enlace de YouTube, Drive, Vimeo..." class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl text-white outline-none focus:border-purple-500" required>
-          </div>
-          <div class="mt-4 flex justify-end">
-            <button type="submit" class="bg-purple-600 hover:bg-purple-500 text-white py-2 px-6 rounded-xl font-bold flex items-center gap-2 transition-colors">Guardar Material</button>
-          </div>
-        </form>
-
-        <div id="lista-ovas" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        <div id="lista-ovas" class="grid gap-4 md:grid-cols-2"></div>
       </div>
 
-      <!-- VISTA: LIBRO -->
       <div id="view-libro" class="hidden space-y-8 fade-in">
-        <div class="border-b border-indigo-500/30 pb-6 mb-6">
-          <h2 class="text-3xl font-bold text-white mb-2">Libro Digital</h2>
-          <p class="text-indigo-300">Una recopilación que cuenta las historias de maestros y niños y su experiencia con lo digital.</p>
+        <h2 class="text-3xl font-bold text-white border-b border-indigo-500/30 pb-4">Libro Digital</h2>
+        <div id="admin-form-libro" class="admin-only hidden bg-[#1e1541] p-6 rounded-2xl border border-purple-500/30 shadow-xl mb-6">
+          <h3 class="text-lg font-bold mb-4">Añadir Capítulo</h3>
+          <div class="space-y-3">
+            <input type="text" id="titulo-libro" placeholder="Título del capítulo..." class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl outline-none text-white">
+            <input type="url" id="link-libro" placeholder="Enlace del libro..." class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl outline-none text-white">
+            <button onclick="subirMaterial('libro')" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 rounded-xl">Publicar para todos</button>
+          </div>
         </div>
-        
-        <form onsubmit="subirMaterialGlobal(event, 'libro')" class="admin-only hidden bg-[#1e1541] border border-fuchsia-500/50 p-6 rounded-2xl shadow-xl mb-8 relative">
-          <div class="absolute -top-3 right-4 bg-fuchsia-600 text-white text-xs font-bold px-2 py-1 rounded">MODO PROFESOR</div>
-          <h3 class="text-lg font-bold text-white mb-4">Añadir Capítulo o Libro</h3>
-          <div class="flex flex-col gap-4">
-            <input type="text" id="titulo-libro" placeholder="Escribe el Título del capítulo..." class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl text-white outline-none focus:border-purple-500" required>
-            <input type="url" id="link-libro" placeholder="Pega el enlace a donde tienes tu Libro (Canva, Drive, ISSUU)..." class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl text-white outline-none focus:border-purple-500" required>
-          </div>
-          <div class="mt-4 flex justify-end">
-            <button type="submit" class="bg-purple-600 hover:bg-purple-500 text-white py-2 px-6 rounded-xl font-bold flex items-center gap-2 transition-colors">Guardar Material</button>
-          </div>
-        </form>
-
-        <div id="lista-libro" class="grid grid-cols-1 gap-4"></div>
+        <div id="lista-libro" class="grid gap-4"></div>
       </div>
 
-      <!-- VISTA: COMUNIDAD -->
       <div id="view-comunidad" class="hidden space-y-6 fade-in flex-col h-[80vh]">
-        <div class="border-b border-indigo-500/30 pb-4 shrink-0">
-          <h2 class="text-3xl font-bold text-white mb-2">Foro de Comentarios</h2>
-          <p class="text-indigo-300">Espacio para saludar, dejar dudas y compartir con los demás compañeros.</p>
-        </div>
-
+        <h2 class="text-3xl font-bold text-white border-b border-indigo-500/30 pb-4 shrink-0">Comentarios</h2>
         <div class="flex-1 bg-[#1e1541]/50 border border-indigo-500/20 rounded-2xl p-4 flex flex-col overflow-hidden">
-          <div id="lista-comunidad" class="flex-1 overflow-y-auto space-y-3 pr-2 pb-4">
-             <!-- Mensajes aquí -->
-          </div>
-          <form onsubmit="enviarMensajeForo(event)" class="mt-4 shrink-0 bg-[#130d26] p-2 rounded-xl border border-indigo-500/30 flex gap-2">
-            <input type="text" id="nombre-foro" placeholder="Tu nombre..." class="w-1/3 bg-transparent text-white px-3 outline-none border-r border-indigo-500/30" required>
-            <input type="text" id="texto-foro" placeholder="Escribe un mensaje..." class="flex-1 bg-transparent text-white px-3 outline-none" required>
-            <button type="submit" class="bg-fuchsia-600 hover:bg-fuchsia-500 text-white px-4 py-2 rounded-lg flex items-center transition-colors">
-              <i data-feather="send" class="w-4 h-4"></i>
+          <div id="lista-comunidad" class="flex-1 overflow-y-auto space-y-3 pr-2"></div>
+          <div class="mt-4 shrink-0 bg-[#130d26] p-2 rounded-xl border border-indigo-500/30 flex gap-2">
+            <input type="text" id="nombre-foro" placeholder="Tu nombre..." class="w-1/3 bg-transparent text-white px-3 outline-none border-r border-indigo-500/30">
+            <input type="text" id="texto-foro" placeholder="Escribe un mensaje..." class="flex-1 bg-transparent text-white px-3 outline-none">
+            <button onclick="enviarComentario()" class="bg-fuchsia-600 hover:bg-fuchsia-500 text-white p-2 rounded-lg transition-colors">
+              <i data-feather="send" class="w-5 h-5"></i>
             </button>
-          </form>
+          </div>
         </div>
       </div>
-
     </main>
   </div>
 
-  <!-- MODAL: LOGIN -->
-  <div id="modal-login" class="hidden fixed inset-0 bg-[#000000cc] z-50 flex items-center justify-center p-4 fade-in">
-    <div class="bg-[#1e1541] rounded-2xl p-6 md:p-8 max-w-sm w-full text-center border border-indigo-500/50 shadow-2xl relative">
-      <button onclick="cerrarModalLogin()" class="absolute top-4 right-4 text-indigo-300 hover:text-white">
-        <i data-feather="x" class="w-6 h-6"></i>
-      </button>
-      <h3 class="text-2xl font-bold text-white mb-4 flex justify-center items-center gap-2">
-        <i data-feather="lock" class="text-fuchsia-400"></i> Acceso Profesor
-      </h3>
-      <p class="text-indigo-300 text-sm mb-4">Ingresa tu clave secreta para poder guardar y borrar contenido.</p>
-      <input type="password" id="input-password" placeholder="Escribe tu clave..." class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl text-white outline-none focus:border-fuchsia-500 mb-4 text-center">
-      <button onclick="verificarClave()" class="w-full bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold py-3 px-4 rounded-xl transition-colors">
-        Entrar
-      </button>
-    </div>
-  </div>
-
-  <!-- MODAL: COMPARTIR QR -->
-  <div id="modal-compartir" class="hidden fixed inset-0 bg-[#000000cc] z-50 flex items-center justify-center p-4 fade-in">
-    <div class="bg-[#1e1541] rounded-2xl p-6 md:p-8 max-w-sm w-full text-center border border-indigo-500/50 shadow-2xl relative">
-      <button onclick="cerrarModalCompartir()" class="absolute top-4 right-4 text-indigo-300 hover:text-white">
-        <i data-feather="x" class="w-6 h-6"></i>
-      </button>
-      <h3 class="text-2xl font-bold text-white mb-2 flex justify-center items-center gap-2">
-        <i data-feather="share-2" class="text-emerald-400"></i> Compartir
-      </h3>
-      <p class="text-indigo-300 text-sm mb-6">IMPORTANTE: Debes subir el archivo a una página como Tiiny Host primero. Luego este código servirá.</p>
-      
-      <div class="bg-white p-3 rounded-xl mx-auto inline-block mb-6 shadow-lg">
-        <img id="qr-image" src="" alt="Código QR" class="w-48 h-48 object-contain">
-      </div>
-      
-      <div class="space-y-3">
-        <button onclick="copiarLink(window.location.href)" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors">
-          <i data-feather="copy" class="w-5 h-5"></i> Copiar Link Directo
-        </button>
+  <!-- MODALES: LOGIN Y COMPARTIR -->
+  <div id="modal-login" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-[#1e1541] rounded-2xl p-8 max-w-sm w-full text-center border border-indigo-500/50">
+      <h3 class="text-2xl font-bold text-white mb-4">Acceso Profesor</h3>
+      <input type="password" id="input-password" placeholder="Clave: profe2026" class="w-full bg-[#130d26] border border-indigo-500/50 p-3 rounded-xl text-white outline-none mb-6 text-center">
+      <div class="flex gap-2">
+        <button onclick="cerrarModalLogin()" class="flex-1 bg-white/10 hover:bg-white/20 text-white py-3 rounded-xl">Cancelar</button>
+        <button onclick="verificarClave()" class="flex-1 bg-fuchsia-600 hover:bg-fuchsia-500 text-white font-bold py-3 rounded-xl">Entrar</button>
       </div>
     </div>
   </div>
 
-  <!-- LÓGICA DEL SISTEMA -->
-  <script>
-    feather.replace();
+  <div id="modal-compartir" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="bg-[#1e1541] rounded-2xl p-8 max-w-sm w-full text-center border border-indigo-500/50">
+      <h3 class="text-2xl font-bold text-white mb-6">Compartir Aula</h3>
+      <img id="qr-image" class="w-44 h-44 mx-auto mb-6 bg-white p-2 rounded-xl">
+      <button onclick="copiarEnlace()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 mb-4">
+        <i data-feather="copy"></i> Copiar Link
+      </button>
+      <button onclick="cerrarModalCompartir()" class="w-full text-indigo-300 text-sm">Cerrar</button>
+    </div>
+  </div>
 
-   let todosLosMateriales = JSON.parse(localStorage.getItem('aula_materiales_jy')) || [];
+  <!-- FIREBASE SCRIPTS -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, deleteDoc, doc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-let mensajesForo = JSON.parse(localStorage.getItem('aula_foro_jy')) || [];
-    window.esAdmin = false;
+    // CONFIGURACIÓN DINÁMICA
+    const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
+      apiKey: "AIzaSyCLPqylwIJPU6TdG6OExiMQ2TykGIfBf3w",
+      authDomain: "aulacreativajy2026.firebaseapp.com",
+      projectId: "aulacreativajy2026",
+      storageBucket: "aulacreativajy2026.firebasestorage.app",
+      messagingSenderId: "49822294220",
+      appId: "1:49822294220:web:e5285e30de111ddc612269"
+    };
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'aula-creativa-jy';
 
-    function guardarDatos() {
-        localStorage.setItem('aula_materiales_jy', JSON.stringify(todosLosMateriales));
-        localStorage.setItem('aula_foro_jy', JSON.stringify(mensajesForo));
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    let usuario = null;
+
+    // AUTENTICACIÓN PARA LA NUBE
+    signInAnonymously(auth).then(() => {
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          usuario = user;
+          document.getElementById('nube-punto').classList.replace('bg-yellow-500', 'bg-emerald-500');
+          document.getElementById('nube-texto').innerText = 'En Línea (Sincronizado)';
+          escucharCambios();
+        }
+      });
+    });
+
+    // ESCUCHAR CAMBIOS EN TIEMPO REAL
+    function escucharCambios() {
+      // Materiales
+      onSnapshot(collection(db, 'artifacts', appId, 'public', 'data', 'materiales'), (snapshot) => {
+        const datos = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+        renderizarLista(datos);
+      }, (err) => console.error("Error nube:", err));
+
+      // Comentarios
+      onSnapshot(collection(db, 'artifacts', appId, 'public', 'data', 'comentarios'), (snapshot) => {
+        const comentarios = snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+        comentarios.sort((a,b) => (a.fecha?.seconds || 0) - (b.fecha?.seconds || 0));
+        renderizarForo(comentarios);
+      }, (err) => console.error("Error foro:", err));
     }
 
-    function renderizarMateriales() {
-      const listas = {
+    // ACCIONES DE PROFESOR
+    window.subirMaterial = async (cat) => {
+      if (!window.esAdmin) return;
+      const t = document.getElementById(`titulo-${cat}`).value;
+      const l = document.getElementById(`link-${cat}`).value;
+      if (!t || !l) return mostrarAlerta("Completa los datos");
+
+      try {
+        await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'materiales'), {
+          titulo: t, url: l, categoria: cat, fecha: serverTimestamp()
+        });
+        document.getElementById(`titulo-${cat}`).value = '';
+        document.getElementById(`link-${cat}`).value = '';
+        mostrarAlerta("¡Publicado en todos los dispositivos!", false);
+      } catch (e) { mostrarAlerta("Error al publicar en la nube"); }
+    };
+
+    window.borrarMaterial = async (id) => {
+      if (!window.esAdmin) return;
+      if (confirm("¿Borrar definitivamente para todos?")) {
+        await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', 'materiales', id));
+      }
+    };
+
+    window.enviarComentario = async () => {
+      const n = document.getElementById('nombre-foro').value || "Invitado";
+      const t = document.getElementById('texto-foro').value;
+      if (!t) return;
+
+      await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'comentarios'), {
+        autor: n, texto: t, fecha: serverTimestamp()
+      });
+      document.getElementById('texto-foro').value = '';
+    };
+
+    window.borrarComentario = async (id) => {
+      if (window.esAdmin) await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', 'comentarios', id));
+    };
+
+    // FUNCIONES DE RENDERIZADO
+    function renderizarLista(materiales) {
+      const contenedores = {
         planeacion: document.getElementById('lista-planeacion'),
-        ova: document.getElementById('lista-ovas'),
+        ovas: document.getElementById('lista-ovas'),
         libro: document.getElementById('lista-libro')
       };
 
-      Object.values(listas).forEach(l => l.innerHTML = '');
+      Object.values(contenedores).forEach(c => c.innerHTML = '');
 
-      todosLosMateriales.forEach((mat) => {
-        const contenedor = listas[mat.categoria];
-        if(!contenedor) return;
-
-        const iconMap = { planeacion: 'file-text', ova: 'video', libro: 'book' };
-        
+      materiales.forEach(m => {
+        const c = contenedores[m.categoria];
+        if (!c) return;
         const div = document.createElement('div');
-        div.className = "bg-[#1e1541]/80 border border-indigo-500/20 p-5 rounded-xl transition-all shadow-md flex items-center justify-between";
+        div.className = "bg-[#1e1541]/80 border border-indigo-500/20 p-5 rounded-xl flex items-center justify-between shadow-lg fade-in";
         div.innerHTML = `
-          <div class="flex items-center gap-4 overflow-hidden">
-            <div class="bg-indigo-900 p-3 rounded-lg text-indigo-300 shrink-0">
-               <i data-feather="${iconMap[mat.categoria] || 'file'}" class="w-6 h-6"></i>
-            </div>
-            <div class="truncate pr-4">
-              <h4 class="font-bold text-white text-lg truncate">${mat.titulo}</h4>
-              <a href="${mat.url}" target="_blank" class="text-sm text-purple-400 hover:text-purple-300 flex items-center gap-1 mt-1 transition-colors">
-                <i data-feather="external-link" class="w-3 h-3"></i> Abrir enlace
-              </a>
-            </div>
+          <div class="truncate pr-4">
+            <h4 class="font-bold text-white truncate">${m.titulo}</h4>
+            <a href="${m.url}" target="_blank" class="text-sm text-purple-400 hover:underline">Abrir Contenido</a>
           </div>
-          
-          <button onclick="eliminarMaterial('${mat.id}')" class="admin-only ${window.esAdmin ? '' : 'hidden'} p-2 text-red-400 hover:bg-red-500/20 rounded-lg shrink-0" title="Borrar (Solo Profe)">
-            <i data-feather="trash-2" class="w-5 h-5"></i>
-          </button>
+          ${window.esAdmin ? `<button onclick="borrarMaterial('${m.id}')" class="text-red-400 p-2"><i data-feather="trash-2"></i></button>` : ''}
         `;
-        contenedor.appendChild(div);
+        c.appendChild(div);
       });
-
-      Object.keys(listas).forEach(cat => {
-        if(listas[cat].children.length === 0) {
-          listas[cat].innerHTML = `<div class="col-span-full py-8 text-center text-indigo-300/50">Aún no hay contenido subido.</div>`;
-        }
-      });
-
       feather.replace();
     }
 
-    function renderizarForo() {
+    function renderizarForo(msgs) {
       const caja = document.getElementById('lista-comunidad');
       caja.innerHTML = '';
-      if(mensajesForo.length === 0) {
-        caja.innerHTML = `<div class="text-center text-indigo-300/50 mt-10">Sé el primero en saludar 👋</div>`;
-        return;
-      }
-
-      mensajesForo.forEach(msg => {
+      msgs.forEach(m => {
         const div = document.createElement('div');
-        div.className = "bg-[#130d26] p-3 rounded-lg border border-indigo-500/20 w-max max-w-[85%]";
+        div.className = "bg-[#130d26] p-3 rounded-xl border border-indigo-500/10 w-max max-w-[85%] group";
         div.innerHTML = `
-          <div class="text-xs font-bold text-fuchsia-400 mb-1 flex items-center gap-2">
-            ${msg.autor}
-            ${window.esAdmin ? `<button onclick="eliminarForo('${msg.id}')" class="text-red-500 hover:text-red-300"><i data-feather="x" class="w-3 h-3"></i></button>` : ''}
+          <div class="text-[10px] font-bold text-fuchsia-400 uppercase flex justify-between gap-4">
+            ${m.autor}
+            ${window.esAdmin ? `<button onclick="borrarComentario('${m.id}')" class="text-red-500 opacity-0 group-hover:opacity-100 transition-opacity">Borrar</button>` : ''}
           </div>
-          <div class="text-sm text-indigo-100">${msg.texto}</div>
+          <div class="text-sm text-indigo-100">${m.texto}</div>
         `;
         caja.appendChild(div);
       });
       caja.scrollTop = caja.scrollHeight;
-      feather.replace();
     }
 
-    renderizarMateriales();
-    renderizarForo();
-
-    // RESPALDO
-    window.exportarRespaldo = () => {
-      const datos = { materiales: todosLosMateriales, foro: mensajesForo };
-      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(datos));
-      const descargarNodo = document.createElement('a');
-      descargarNodo.setAttribute("href", dataStr);
-      descargarNodo.setAttribute("download", "respaldo_aula_creativa.json");
-      document.body.appendChild(descargarNodo);
-      descargarNodo.click();
-      descargarNodo.remove();
-      mostrarMensaje("¡Copia guardada en tus descargas!", false);
+    // GLOBALES PARA INTERFAZ
+    window.cambiarPestana = (p) => {
+      ['inicio', 'planeacion', 'ovas', 'libro', 'comunidad'].forEach(v => document.getElementById(`view-${v}`).classList.add('hidden'));
+      document.getElementById(`view-${p}`).classList.remove('hidden');
+      if(p === 'comunidad') document.getElementById(`view-${p}`).classList.add('flex');
+      
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('bg-purple-600/20', 'text-purple-300', 'border'));
+      const act = document.querySelector(`[onclick="cambiarPestana('${p}')"]`);
+      if(act) act.classList.add('bg-purple-600/20', 'text-purple-300', 'border', 'border-purple-500/30');
     };
 
-    window.importarRespaldo = (event) => {
-      const archivo = event.target.files[0];
-      if (!archivo) return;
-      const lector = new FileReader();
-      lector.onload = (e) => {
-        try {
-          const datos = JSON.parse(e.target.result);
-          if (datos.materiales && datos.foro) {
-            todosLosMateriales = datos.materiales;
-            mensajesForo = datos.foro;
-            guardarDatos();
-            renderizarMateriales();
-            renderizarForo();
-            mostrarMensaje("¡Datos restaurados correctamente!", false);
-          }
-        } catch (error) {
-          mostrarMensaje("Archivo inválido.", true);
-        }
-      };
-      lector.readAsText(archivo);
-    };
-
-    // COMPARTIR
-    window.abrirModalCompartir = () => {
-      const url = window.location.href; 
-      document.getElementById('qr-image').src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(url)}&color=1a1438&bgcolor=ffffff`;
-      document.getElementById('modal-compartir').classList.remove('hidden');
-    };
-
-    window.cerrarModalCompartir = () => {
-      document.getElementById('modal-compartir').classList.add('hidden');
-    };
-
-    window.copiarLink = (url) => {
-      if(url.includes("blob:") || url.includes("preview")) {
-          mostrarMensaje("No puedes compartir el link del simulador. Sube el archivo HTML a internet primero.", true);
-          return;
-      }
-      navigator.clipboard.writeText(url).then(() => {
-        mostrarMensaje("¡Enlace copiado! Ya puedes pegarlo en WhatsApp.", false);
-        cerrarModalCompartir();
-      }).catch(() => {
-        mostrarMensaje("Copia el enlace de la barra de tu navegador.", true);
-      });
-    };
-
-    // NAVEGACIÓN
-    window.cambiarPestana = (pestana) => {
-      ['inicio', 'planeacion', 'ovas', 'libro', 'comunidad'].forEach(p => {
-        document.getElementById(`view-${p}`).classList.add('hidden');
-        document.getElementById(`view-${p}`).classList.remove('flex'); 
-      });
-
-      document.querySelectorAll('.nav-btn').forEach(btn => {
-        btn.className = "nav-btn w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all text-indigo-300 hover:bg-white/5 hover:text-white";
-      });
-
-      const btnActivo = document.querySelector(`[data-tab="${pestana}"]`);
-      if(btnActivo) btnActivo.className = "nav-btn w-full flex items-center justify-center md:justify-start gap-3 p-3 rounded-lg transition-all bg-purple-600/20 text-purple-300 border border-purple-500/30";
-
-      const view = document.getElementById(`view-${pestana}`);
-      view.classList.remove('hidden');
-      if(pestana === 'comunidad') view.classList.add('flex');
-    };
-
-    window.mostrarMensaje = (texto, error = true) => {
-      const msjBox = document.getElementById('mensaje-alerta');
-      document.getElementById('mensaje-texto').innerText = texto;
-      msjBox.className = `fixed top-5 right-5 px-6 py-4 rounded-xl shadow-2xl z-50 flex items-start gap-3 fade-in text-white ${error ? 'bg-red-600' : 'bg-emerald-500'} max-w-sm`;
-      setTimeout(() => msjBox.classList.add('hidden'), 3500);
-    };
-
-    window.activarModoProfesor = () => {
+    window.abrirModalLogin = () => {
       if(window.esAdmin) {
         window.esAdmin = false;
         document.querySelectorAll('.admin-only').forEach(el => el.classList.add('hidden'));
-        document.getElementById('btn-modo-profe').innerHTML = `<i data-feather="lock" class="w-4 h-4"></i> <span class="hidden md:inline">Soy Profesor</span>`;
+        document.getElementById('lock-icon').setAttribute('data-feather', 'lock');
+        document.getElementById('lock-text').innerText = 'Soy Profesor';
         document.getElementById('btn-modo-profe').classList.remove('bg-fuchsia-600', 'text-white');
-        mostrarMensaje("Modo profesor desactivado.", false);
-        feather.replace();
+        escucharCambios(); // Refresca iconos
       } else {
         document.getElementById('modal-login').classList.remove('hidden');
-        document.getElementById('input-password').value = '';
-        document.getElementById('input-password').focus();
       }
+      feather.replace();
     };
 
-    window.cerrarModalLogin = () => {
-      document.getElementById('modal-login').classList.add('hidden');
-    };
+    window.cerrarModalLogin = () => document.getElementById('modal-login').classList.add('hidden');
 
     window.verificarClave = () => {
-      const pass = document.getElementById('input-password').value;
-      if (pass === "profe2026") {
+      if (document.getElementById('input-password').value === "profe2026") {
         window.esAdmin = true;
         document.querySelectorAll('.admin-only').forEach(el => el.classList.remove('hidden'));
-        document.getElementById('btn-modo-profe').innerHTML = `<i data-feather="unlock" class="w-4 h-4"></i> <span class="hidden md:inline">Modo Profe Activo</span>`;
+        document.getElementById('lock-icon').setAttribute('data-feather', 'unlock');
+        document.getElementById('lock-text').innerText = 'Panel Activo';
         document.getElementById('btn-modo-profe').classList.add('bg-fuchsia-600', 'text-white');
-        mostrarMensaje("¡Acceso concedido!", false);
         cerrarModalLogin();
-        feather.replace();
-      } else {
-        mostrarMensaje("Clave incorrecta.", true);
-      }
+        mostrarAlerta("¡Bienvenida Profe!", false);
+        escucharCambios(); // Refresca vista con botones borrar
+      } else { mostrarAlerta("Clave incorrecta"); }
+      feather.replace();
     };
 
-    window.subirMaterialGlobal = (e, categoria) => {
-      e.preventDefault();
-
-      const titulo = document.getElementById(`titulo-${categoria}`).value;
-      const linkExterno = document.getElementById(`link-${categoria}`).value;
-
-      if (!titulo || !linkExterno) {
-        return mostrarMensaje("Completa los datos necesarios.", true);
-      }
-
-      todosLosMateriales.push({
-        id: Date.now().toString(),
-        titulo: titulo,
-        url: linkExterno,
-        categoria: categoria,
-        fecha: new Date().toISOString()
-      });
-
-      todosLosMateriales.sort((a,b) => b.fecha.localeCompare(a.fecha));
-      guardarDatos();
-      renderizarMateriales();
-
-      e.target.reset();
-      mostrarMensaje("¡Guardado correctamente!", false);
+    window.mostrarAlerta = (t, e=true) => {
+      const b = document.getElementById('mensaje-alerta');
+      document.getElementById('mensaje-texto').innerText = t;
+      b.className = `fixed top-5 right-5 px-6 py-4 rounded-xl shadow-2xl z-[100] text-white ${e ? 'bg-red-600' : 'bg-emerald-500'}`;
+      b.classList.remove('hidden');
+      setTimeout(() => b.classList.add('hidden'), 3000);
     };
 
-    window.eliminarMaterial = (id) => {
-      if(!window.esAdmin) return;
-      if(window.confirm("¿Borrar este archivo?")) {
-        todosLosMateriales = todosLosMateriales.filter(m => m.id !== id);
-        guardarDatos();
-        renderizarMateriales();
-      }
+    window.abrirModalCompartir = () => {
+      const url = window.location.href;
+      document.getElementById('qr-image').src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(url)}`;
+      document.getElementById('modal-compartir').classList.remove('hidden');
+    };
+    window.cerrarModalCompartir = () => document.getElementById('modal-compartir').classList.add('hidden');
+    window.copiarEnlace = () => {
+      navigator.clipboard.writeText(window.location.href).then(() => mostrarAlerta("¡Link copiado!", false));
     };
 
-    window.enviarMensajeForo = (e) => {
-      e.preventDefault();
-      
-      const nombre = document.getElementById('nombre-foro').value;
-      const texto = document.getElementById('texto-foro').value;
-
-      mensajesForo.push({
-        id: Date.now().toString(),
-        autor: nombre,
-        texto: texto,
-        fecha: new Date().toISOString()
-      });
-
-      mensajesForo.sort((a,b) => a.fecha.localeCompare(b.fecha));
-      guardarDatos();
-      renderizarForo();
-      document.getElementById('texto-foro').value = '';
-    };
-
-    window.eliminarForo = (id) => {
-      if(window.confirm("¿Borrar este comentario?")) {
-        mensajesForo = mensajesForo.filter(m => m.id !== id);
-        guardarDatos();
-        renderizarForo();
-      }
-    };
-
+    feather.replace();
   </script>
 </body>
 </html>
