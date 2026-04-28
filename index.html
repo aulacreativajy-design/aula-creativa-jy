@@ -271,8 +271,9 @@
   <script>
     feather.replace();
 
-    let todosLosMateriales = JSON.parse(localStorage.getItem('aula_materiales_jy')) || [];
-    let mensajesForo = JSON.parse(localStorage.getItem('aula_foro_jy')) || [];
+   let todosLosMateriales = JSON.parse(localStorage.getItem('aula_materiales_jy')) || [];
+
+let mensajesForo = JSON.parse(localStorage.getItem('aula_foro_jy')) || [];
     window.esAdmin = false;
 
     function guardarDatos() {
